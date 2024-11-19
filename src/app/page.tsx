@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import '../../styles/global/global.css';
+import NavBar from '../../components/NavBar';
 
 export default function Home() {
   return (
     <div>
+      <NavBar />
       <nav>
         <Link href="/book">
           Book
