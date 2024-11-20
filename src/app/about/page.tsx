@@ -1,11 +1,11 @@
 import '@styles/global/global.css';
 import NavBar from '@components/NavBar';
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <NavBar />
-      <h1>Home Page</h1>
+      <h1>About Page</h1>
     </div>
   );
 }

@@ -1,21 +1,49 @@
-nav {
-  background-color: white;
-  position: sticky;
+.header {
   top: 0;
-  z-index: 5;
+  left: 0;
+  width: 100%;
+  background: seagreen;
+  z-index: 100;
 }
-nav ul {
+.header .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 100px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav ul li {
-  list-style-type: none;
-  margin: 1rem;
-}
-nav ul li a {
-  color: black;
+.header .logo {
+  font-size: 32px;
+  color: white;
   text-decoration: none;
-  transition: all 0.1s ease;
+  font-weight: 700;
 }
-nav ul li a:hover {
-  color: rgb(230, 192, 253);
+.header .navbar {
+  display: flex;
+  gap: 20px;
+}
+.header .navbar a {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+.header .navbar a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+.header .navbar a:hover::before, .header .navbar a.active::before {
+  width: 100%;
+}
+.header .navbar a.active {
+  font-weight: 700;
+  color: lightyellow;
 }/*# sourceMappingURL=NavBar.css.map */
