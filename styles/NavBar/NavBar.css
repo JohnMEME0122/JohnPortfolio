@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: seagreen;
+  background: rgb(68, 145, 233);
   z-index: 100;
 }
 .header .container {
