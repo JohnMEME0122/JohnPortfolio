@@ -1,0 +1,85 @@
+.background {
+  background-color: #8559ff;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-wrapper {
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        position: relative;
+        margin: 15px 0;
+        border-bottom: 2px solid #ccc;
+
+        input {
+          width: 100%;
+          height: 40px;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #fff;
+          font-size: 1rem;
+          &::placeholder {
+            color: transparent; /* 初始狀態下不顯示 */
+          }
+          &:focus::placeholder {
+            color: #000; /* 聚焦時的顏色 */
+          }
+          &:focus ~ label,
+          &:valid ~ label {
+            transform: translateY(-150%);
+            font-size: 0.8rem;
+            top: 10px;
+          }
+        }
+
+        label {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          color: #fff;
+          font-size: 1rem;
+          pointer-events: none;
+          transition: 0.3s ease;
+        }
+      }
+
+      button {
+        background-color: #fff;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}

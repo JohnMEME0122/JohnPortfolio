@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import '../styles/NavBar/NavBar.css';
+import '@components/NavBar/styles/NavBar.css';
 import Link from "next/link";
 
 const NavBar: FC = () => {
@@ -17,7 +17,7 @@ const NavBar: FC = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link href="/" className="logo">Logo</Link>
+        <Link href="/" className="logo">John Website</Link>
         <nav className="navbar">
           {links.map(({ href, label }) => (
             <Link

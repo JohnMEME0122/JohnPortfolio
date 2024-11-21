@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.background {
+  background-color: #8559ff;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background .login-wrapper {
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.background .login-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+.background .login-wrapper form h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.background .login-wrapper form .input-group {
+  position: relative;
+  margin: 15px 0;
+  border-bottom: 2px solid #ccc;
+}
+.background .login-wrapper form .input-group input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+}
+.background .login-wrapper form .input-group input::-moz-placeholder {
+  color: transparent; /* 初始狀態下不顯示 */
+}
+.background .login-wrapper form .input-group input::placeholder {
+  color: transparent; /* 初始狀態下不顯示 */
+}
+.background .login-wrapper form .input-group input:focus::-moz-placeholder {
+  color: #000; /* 聚焦時的顏色 */
+}
+.background .login-wrapper form .input-group input:focus::placeholder {
+  color: #000; /* 聚焦時的顏色 */
+}
+.background .login-wrapper form .input-group input:focus ~ label, .background .login-wrapper form .input-group input:valid ~ label {
+  transform: translateY(-150%);
+  font-size: 0.8rem;
+  top: 10px;
+}
+.background .login-wrapper form .input-group label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+.background .login-wrapper form button {
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.background .login-wrapper form button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+}/*# sourceMappingURL=contact.css.map */
