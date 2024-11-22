@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import '@components/NavBar/styles/NavBar.css';
 import Link from "next/link";
+import './styles/NavBar.css';
 
 const NavBar: FC = () => {
   const pathname = usePathname();

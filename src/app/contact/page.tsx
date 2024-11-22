@@ -1,6 +1,7 @@
 import '@styles/global/global.css';
-import './styles/contact.css';
 import NavBar from '@components/NavBar/NavBar';
+import './styles/contact.css';
+
 
 export default function Contact() {
   return (
