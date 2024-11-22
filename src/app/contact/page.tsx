@@ -1,26 +1,8 @@
-"use client";
-
 import '@styles/global/global.css';
 import './styles/contact.css';
 import NavBar from '@components/NavBar/NavBar';
-import { useEffect } from 'react';
 
 export default function Contact() {
-
-  useEffect(() => {
-    const form = document.querySelector("form");
-    form?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("感謝您的聯絡，我們將盡快回覆您！");
-    });
-
-    return () => {
-      form?.removeEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("感謝您的聯絡，我們將盡快回覆您！");
-      });
-    };
-  }, []);
   return (
     <>
       <NavBar />
@@ -64,6 +46,5 @@ export default function Contact() {
         </section>
       </main>
     </>
-
   );
 }
