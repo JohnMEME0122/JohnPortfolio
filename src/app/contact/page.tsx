@@ -1,32 +1,69 @@
+"use client";
+
 import '@styles/global/global.css';
 import './styles/contact.css';
 import NavBar from '@components/NavBar/NavBar';
+import { useEffect } from 'react';
 
 export default function Contact() {
+
+  useEffect(() => {
+    const form = document.querySelector("form");
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("感謝您的聯絡，我們將盡快回覆您！");
+    });
+
+    return () => {
+      form?.removeEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("感謝您的聯絡，我們將盡快回覆您！");
+      });
+    };
+  }, []);
   return (
-    <div>
+    <>
       <NavBar />
-      <div className="background">
-        <div className="login-wrapper">
+      <main className="contact-background">
+        <section className="form-wrapper">
           <form>
             <h2>聯絡方式</h2>
             <div className="input-group">
-              <input type="text" id="name" name="name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                required />
               <label htmlFor="name">您的姓名</label>
             </div>
             <div className="input-group">
-              <input type="email" id="email" name="email" placeholder="a123456@gmail.com" required />
-              <label htmlFor="email">您的Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="a123456@gmail.com"
+                required
+              />
+              <label htmlFor="email">您的信箱</label>
             </div>
             <div className="input-group">
-              <input type="text" id="phone" name="phone" placeholder="0912345678" required />
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="0912345678"
+                pattern="09\d{8}"
+                title="請輸入有效的台灣手機號碼，如 0912345678"
+                required
+              />
               <label htmlFor="phone">您的電話</label>
             </div>
             <button type="submit">送出</button>
           </form>
-        </div>
-      </div>
+        </section>
+      </main>
+    </>
 
-    </div>
   );
 }
